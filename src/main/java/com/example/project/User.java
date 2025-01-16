@@ -62,12 +62,13 @@ public class User{
             // adds a line skip
             returnStr += "\n";
         }
+        return returnStr;
     } //returns a booklist for the user, if empty, output "empty"
 
     // public method that returns string with user Info
     public String userInfo() {
         // returns a list of information on user and calls bookListInfo() method to add book info
-        return "Name: " + name + "\nID: " + Id + "\nBooks:\n" + bookListInfo();
+        return "Name: " + name + "\nId: " + Id + "\nBooks: \n" + bookListInfo();
     } //returns  "Name: []\nID: []\nBooks:\n[]"
        
 }
