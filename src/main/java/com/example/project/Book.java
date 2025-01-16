@@ -2,29 +2,87 @@ package com.example.project;
 
 public class Book{
     //requires 5 attributes String title, String author, int yearPublished, String isbn, int quantity
+    private String title;
+    private String author;
+    private int yearPublished;
+    private String isbn;
+    private int quantity;
 
     //requires 1 constructor with 5 arguments that intitialize the attribtues of the class.
+    // public constructor
+    public Book(String title, String author, int yearPublished, String isbn, int quantity) {
+        // initalizes all instance variables to according arguments in parameters
+        this.title = title; 
+        this.author = author;
+        this.yearPublished = yearPublished;
+        this.isbn = isbn;
+        this.quantity = quantity;
+    }
 
-    // public  getTitle() {}
+    // getter method for title
+    public String getTitle() {
+        // returns title
+        return title;
+    }
 
-    // public setTitle() {}
+    // setter method for title
+    public void setTitle(String title) {
+        // sets title to new title
+        this.title = title;
+    }
 
-    // public getAuthor() {}
+    // getter method for author
+    public String getAuthor() {
+        // returns author
+        return author;
+    }
 
-    // public setAuthor() {}
+    // setter method for author
+    public void setAuthor(String author) {
+        // sets author to new author
+        this.author = author;
+    }
 
-    // public getYearPublished() {}
+    // getter method for year published
+    public int getYearPublished() {
+        // returns year
+        return yearPublished;
+    }
 
-    // public setYearPublished() {}
+    // setter method for year published
+    public void setYearPublished(int yearPublished) {
+        // sets year to new year
+        this.yearPublished = yearPublished;
+    }
 
-    // public getIsbn() {}
+    // getter method for isbn
+    public String getIsbn() {
+        // returns isbn
+        return isbn;
+    }
 
-    // public void setIsbn() {}
+    // setter method for isbn
+    public void setIsbn(String isbn) {
+        // sets isbn to new isbn
+        this.isbn = isbn;
+    }
 
-    // public int getQuantity() {}
+    // getter method for quantity
+    public int getQuantity() {
+        // returns quantity
+        return quantity;
+    }
 
-    // public void setQuantity() {}
+    // setter method for quantity
+    public void setQuantity(int quantity) {
+        // sets quantity to new quantity
+        this.quantity = quantity;
+    }
 
-    // public  bookInfo(){} //returns "Title: [], Author: [], Year: [], ISBN: [], Quantity: []"
+    // method that returns string with book info
+    public String bookInfo() {
+        // uses instance variables for information
+        return "Title: " + title + ", Author: " + author + ", Year: " + yearPublished + ", ISBN: " + isbn + ", Quantity: " + quantity;
+    } //returns "Title: [], Author: [], Year: [], ISBN: [], Quantity: []"
        
 }
