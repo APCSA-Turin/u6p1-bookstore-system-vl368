@@ -47,7 +47,9 @@ public class BookStore{
             }
         }
         // adds user to users array at index firstIdx
-        users[firstIdx] = user;
+        if (firstIdx != -1) {
+            users[firstIdx] = user;
+        }
     } 
 
     // method to remove user from users array
@@ -167,9 +169,12 @@ public class BookStore{
         String returnStr = "";
         // uses a loop to add all user info to returnStr
         for (int i = 0; i < users.length; i++) {
-            returnStr += users[i].userInfo();
-            // skips a line
-            returnStr += "\n";
+            // checks if user index is null
+            if (users[i] != null) {
+                returnStr += users[i].userInfo();
+                // skips a line
+                returnStr += "\n";
+            }
         }
         return returnStr;
     } //you are not tested on this method but use it for debugging purposes
